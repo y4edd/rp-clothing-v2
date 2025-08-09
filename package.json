@@ -1,5 +1,12 @@
 {
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint . --ext .js,.ts,.tsx"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --fix"
+  },
+  "devDependencies": {
+    "lint-staged": "^16.1.5"
   }
 }
